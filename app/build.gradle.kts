@@ -169,7 +169,7 @@ android {
     multiDexEnabled = true
 
     vectorDrawables.useSupportLibrary = true
-    project.ext.set("archivesBaseName", "Signal")
+    project.ext.set("archivesBaseName", "CoolSignal")
 
     manifestPlaceholders["mapsKey"] = "AIzaSyCSx9xea86GwDKGznCAULE9Y5a8b-TfN9U"
 
@@ -332,6 +332,8 @@ android {
 
   productFlavors {
     create("play") {
+      applicationId = "org.coolthoughtcrime.securesms"
+      resValue("string", "app_name", "CoolSignal")
       dimension = "distribution"
       isDefault = true
       buildConfigField("boolean", "MANAGES_APP_UPDATES", "false")
@@ -365,7 +367,7 @@ android {
 
       isDefault = true
 
-      buildConfigField("String", "MOBILE_COIN_ENVIRONMENT", "\"mainnet\"")
+      buildConfigField("String", "MOBILE_COIN_ENVIRONMENT", "\"testnet\"")
       buildConfigField("String", "BUILD_ENVIRONMENT_TYPE", "\"Prod\"")
     }
 
